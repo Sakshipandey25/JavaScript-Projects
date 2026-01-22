@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seconds into Time</title>
+</head>
+
+<body>
+
+    <h1>Seconds into Time</h1>
+    <h3 id="seconds"></h3>
+    <h3 id="hour"></h3>
+
+
+    <script>
+        let seconds = parseInt(prompt("Enter Seconds : "))
+        document.getElementById("seconds").innerText = `Seconds : ${seconds}`;
+
+        let hour = parseInt(seconds / 3600);
+        let min = parseInt((seconds % 3600) / 60);
+        let second = parseInt(seconds % 60)
+
+        document.getElementById("hour").innerText = `Time [HH : MM : SS] : ${hour} : ${min} : ${second}`;
+
+    </script>
+
+</body>
+
+</html>

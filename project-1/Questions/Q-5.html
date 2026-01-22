@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Circle</title>
+</head>
+<body>
+    <h1>Area of Circle</h1>
+    <h3 id="radius"></h3>
+    <h3 id="area"></h3>
+
+    <script>
+        let radius = Number(prompt("Enter Radius"))
+        const area = 3.14 * radius * radius
+
+        document.getElementById("radius").innerText = `Radius is: ${radius}`
+        document.getElementById("area").innerText = `Area is: ${area}`
+
+    </script>
+    
+</body>
+</html>

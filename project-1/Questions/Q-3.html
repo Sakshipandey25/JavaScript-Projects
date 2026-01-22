@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+</head>
+<body>
+    <h1>Marks Calculator</h1>
+    <h3 id = "english"></h3>
+    <h3 id = "hindi"></h3>
+    <h3 id = "maths"></h3>
+    <h3 id = "science"></h3>
+    <h3 id = "gujarati"></h3>
+    <h3 id = "total"></h3>
+    <h3 id = "percentage"></h3>
+
+    <script>
+    let english = Number(prompt("Enter your English Marks:"))
+    let hindi = Number(prompt("Enter your Hindi Marks:"))
+    let maths = Number(prompt("Enter your Maths Marks:"))
+    let science = Number(prompt("Enter your Science Marks:"))
+    let gujarati = Number(prompt("Enter your Gujarati Marks:"))
+    let total = english + hindi + maths + science + gujarati
+    let percentage = (english + hindi + maths + science + gujarati)/500 * 100
+
+    document.getElementById("english").innerText = "Marks of English is: " + english
+    document.getElementById("hindi").innerText = "Marks of Hindi is: " + hindi
+    document.getElementById("maths").innerText = "Marks of Maths is: " + maths
+    document.getElementById("science").innerText = "Marks of Science is: " + science
+    document.getElementById("gujarati").innerText = "Marks of Gujarati is: " + gujarati
+    document.getElementById("total").innerText = " Total Marks is : " + total
+    document.getElementById("percentage").innerText = " Percentage of Marks  is: " + percentage
+</script>
+</body>
+
+</html>
