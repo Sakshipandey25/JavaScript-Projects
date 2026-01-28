@@ -16,25 +16,22 @@ body {
     transition: all 0.2s linear;
 }
 
-.project-sec a {
-    padding: 15px;
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-@media (max-width: 768px) {
-    .project-sec a {
-        font-size: 16px;
-    }
-}
-
-
 .project-sec a:hover {
     color: white;
     background: #020024;
-    transform: translateX(-10px) scaleY(1.03);
+    transform: translateY(-5px) scale(1.02);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 
 .main-div {
     border-radius: 10px;
@@ -48,16 +45,6 @@ body {
     position: relative;
     z-index: 10;
 }
-
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
 
 /* ---- reset ---- */
 body {
