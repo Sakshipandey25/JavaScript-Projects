@@ -1,0 +1,20 @@
+function longestWord(str) {
+    let word = "";
+    let longest = "";
+
+    for (let i = 0; i <= str.length; i++) {
+        if (str[i] !== " " && i !== str.length) {
+            word += str[i];
+        } 
+        else {
+            if (word.length > longest.length) {
+                longest = word;
+            }
+            word = "";
+        }
+    }
+
+    return longest;
+}
+
+console.log(longestWord("Every thing is a mess..."));
