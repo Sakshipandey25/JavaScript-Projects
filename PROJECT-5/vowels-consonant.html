@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel-Consonant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        label {
+            display: inline-block;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            margin: 10px 0;
+        }
+
+        .box {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inputBox">
+            <label for="">String :</label>
+            <input type="text" id="word">
+        </div>
+        <button id="btn">Check Here</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 id="output"></h3>
+    </div>
+
+
+    <script>
+        
+        let btn = document.getElementById("btn");
+        let output = document.getElementById("output");
+
+        function vowelConsonant() {
+            let str = document.getElementById('word').value.toLowerCase();
+
+            let vowels = 0;
+            let consonant = 0;
+
+            for (let i = 0; i < str.length; i++) {
+                let ch = str[i];
+
+                if (ch >= 'a' && ch <= 'z') {
+                    if ('aeiou'.includes(ch)) {
+                        vowels++;
+                    } else {
+                        consonant++;
+                    }
+                }
+            }
+
+            output.innerText = `Vowels: ${vowels} | Consonants: ${consonant}`;
+        }
+
+        btn.addEventListener('click', vowelConsonant);
+    </script>
+
+</body>
+
+</html>

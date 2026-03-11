@@ -1,164 +1,130 @@
 let products = [
-  {
-    id: 1,
-    name: "Vichy Liftactiv Nuit Cream",
-    price: 61.06,
-    oldPrice: 69.00,
-    discount: "8% off",
-    rating: 5.0,
-    reviews: 5,
-    image: src = "./assets/image/Product9.webp"
-  },
 
-  {
-    id: 2,
-    name: "Sphygmomanometer",
-    price: 61.10,
-    oldPrice: 65.00,
-    discount: "6% off",
-    rating: 5.0,
-    reviews: 5,
-    image: src = "./assets/image/Product2.webp"
-  },
+    {
+        id: 1,
+        name: "Blue Dress For Woman",
+        price: 45,
+        oldPrice: 55.25,
+        discount: "35% Off",
+        rating: "★★★★★",
+        reviews: 21,
+        image: "./assets/images/product_img1.jpg.jpeg"
+    },
 
-  {
-    id: 3,
-    name: "Fresh Strawberry",
-    price: 16.04,
-    oldPrice: 18.00,
-    discount: "11% off",
-    rating: 3.0,
-    reviews: 3,
-    image: src = "./assets/image/Product3.webp"
-  },
+    {
+        id: 2,
+        name: "Leather Gray Tuxedo",
+        price: 55,
+        oldPrice: 95,
+        discount: "25% Off",
+        rating: "★★★★☆",
+        reviews: 15,
+        image: "./assets/images/product_img2.jpg.jpeg"
+    },
 
-  {
-    id: 4,
-    name: "Nivea Cream",
-    price: 18.77,
-    oldPrice: 21.00,
-    discount: "11% off",
-    rating: 4.0,
-    reviews: 4,
-    image: src = "./assets/image/Product4.webp"
-  },
+    {
+        id: 3,
+        name: "Woman Full Sliv Dress",
+        price: 68,
+        oldPrice: 99,
+        discount: "",
+        rating: "★★★★★",
+        reviews: 25,
+        image: "./assets/images/product_img3.jpg.jpeg"
+    },
 
-  {
-    id: 5,
-    name: "Vichy Liftactiv Nuit Cream (Tube)",
-    price: 73.88,
-    oldPrice: 85.00,
-    discount: "13% off",
-    rating: 5.0,
-    reviews: 5,
-    image: src = "./assets/image/Product5.webp"
-  },
+    {
+        id: 4,
+        name: "Blue Casual Check Shirt",
+        price: 55,
+        oldPrice: 95,
+        discount: "25% Off",
+        rating: "★★★★☆",
+        reviews: 15,
+        image: "./assets/images/product_img4.jpg.jpeg"
+    },
 
-  {
-    id: 6,
-    name: "Blue Stethoscope",
-    price: 50.15,
-    oldPrice: 65.00,
-    discount: "23% off",
-    rating: 3.0,
-    reviews: 3,
-    image: src = "./assets/image/Product6.webp"
-  },
+    {
+        id: 5,
+        name: "White Black Line Dress",
+        price: 68,
+        oldPrice: 99,
+        discount: "20% Off",
+        rating: "★★★★★",
+        reviews: 25,
+        image: "./assets/images/product_img5.jpg.jpeg"
+    },
 
-  {
-    id: 7,
-    name: "Sphygmomanometer (Manual)",
-    price: 53.36,
-    oldPrice: 57.00,
-    discount: "12% off",
-    rating: 3.0,
-    reviews: 3,
-    image: src = "./assets/image/Product7.webp"
-  },
+    {
+        id: 6,
+        name: "Men Blue Jins Shirt",
+        price: 69,
+        oldPrice: 89,
+        discount: "20% Off",
+        rating: "★★★★☆",
+        reviews: 22,
+        image: "./assets/images/product_img6.jpg.jpeg"
+    },
 
-  {
-    id: 8,
-    name: "Vichy Liftactiv Cream",
-    price: 51.59,
-    oldPrice: 57.00,
-    discount: "7% off",
-    rating: 3.0,
-    reviews: 3,
-    image: src = "./assets/image/Product8.webp"
-  },
+    {
+        id: 7,
+        name: "Black T-Shirt For Woman",
+        price: 69,
+        oldPrice: 89,
+        discount: "20% Off",
+        rating: "★★★★☆",
+        reviews: 22,
+        image: "./assets/images/product_img7.jpg.jpeg"
+    },
 
-  {
-    id: 9,
-    name: "Nivea Cream Soft Milk",
-    price: 15.65,
-    oldPrice: 18.00,
-    discount: "13% off",
-    rating: 3.0,
-    reviews: 3,
-    image: src = "./assets/image/Product9.webp"
-  },
+    {
+        id: 8,
+        name: "Red & Black Check Shirt",
+        price: 55,
+        oldPrice: 95,
+        discount: "25% Off",
+        rating: "★★★★☆",
+        reviews: 15,
+        image: "./assets/images/product_img8.jpg.jpeg"
+    },
 
-   {
-    id: 10,
-    name: "Nivea Cream",
-    price: 18.77,
-    oldPrice: 21.00,
-    discount: "11% off",
-    rating: 4.0,
-    reviews: 4,
-    image: src = "./assets/image/Product4.webp"
-  },
+    {
+        id: 9,
+        name: "Pink Dress For Woman",
+        price: 65,
+        oldPrice: 80,
+        discount: "30% Off",
+        rating: "★★★★★",
+        reviews: 28,
+        image: "./assets/images/product_img9.jpg.jpeg"
+    }
 
-  {
-    id: 11,
-    name: "Vichy Liftactiv Nuit Cream (Tube)",
-    price: 73.88,
-    oldPrice: 85.00,
-    discount: "13% off",
-    rating: 5.0,
-    reviews: 5,
-    image: src = "./assets/image/Product5.webp"
-  },
-
-  {
-    id: 12,
-    name: "Blue Stethoscope",
-    price: 50.15,
-    oldPrice: 65.00,
-    discount: "23% off",
-    rating: 3.0,
-    reviews: 3,
-    image: src = "./assets/image/Product6.webp"
-  },
 ];
 
-products.forEach((products) => {
-  document.getElementById("product-list").innerHTML += `
-                <div class="col-3 ">
-                    <div class="card">
-                       <span class="badge rounded-pill text-bg-primary">${products.discount}</span>
-                        <div>
-                            <img src="${products.image}" alt="${products.name}" width="100%">
-                        </div>
-                        <hr class="fw-bold ">
-                        <div class="ms-4">
-                            <p class="fw-medium mb-0">${products.name}</p>
-                                <span class="yellow-color">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </span>
-                                <span>${products.reviews}</span> <br>
-                                <span class="blue-color fw-medium">US$${products.price}</span>
-                                <span class="fw-medium"><s>US$${products.oldPrice}</s></span>
-                        </div>
-                        <div class="ms-4 mt-2 mb-3">
-                            <button class="btn btn-primary ps-5 pe-5 fw-bold">+ Add to Cart</button>
-                            <button class="btn btn-primary fw-bold"><i class="ri-poker-hearts-line"></i></button>
-                        </div>
-                    </div>
+
+const container = document.getElementById("productContainer");
+
+
+products.forEach((product) => {
+    container.innerHTML += `
+    <div class="col-lg-4 col-md-6">
+        <div class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            
+            <div class="product-info">
+                <h6>${product.name}</h6>
+
+                <div class="d-flex align-items-center mb-2">
+                    <span class="price">$${product.price.toFixed(2)}</span>
+                    <span class="old-price">$${product.oldPrice.toFixed(2)}</span>
+                    <span class="discount">${product.discount}</span>
                 </div>
-    `
-})
+
+                <div class="rating">
+                    ${product.rating} 
+                    <span class="review-count">(${product.reviews})</span>
+                </div>
+            </div>
+        </div>
+    </div>`;
+});

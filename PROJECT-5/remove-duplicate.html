@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Duplicates</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Remove Duplicate Elements</h2>
+
+    <input type="text" id="arrayInput" placeholder="Enter numbers (comma separated)">
+    <button onclick="removeDuplicates()">Remove</button>
+
+    <div id="result"></div>
+
+    <script>
+        function getUnique(arr) {
+            let unique = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (!unique.includes(arr[i])) {
+                    unique.push(arr[i]);
+                }
+            }
+
+            return unique;
+        }
+
+        function removeDuplicates() {
+            let input = document.getElementById("arrayInput").value;
+
+            if (input.trim() === "") {
+                document.getElementById("result").innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            let arr = input.split(",").map(num => Number(num.trim()));
+
+            let uniqueArray = getUnique(arr);
+
+            document.getElementById("result").innerText = "Unique Elements: " + uniqueArray.join(", ");
+        }
+    </script>
+
+</body>
+
+</html>

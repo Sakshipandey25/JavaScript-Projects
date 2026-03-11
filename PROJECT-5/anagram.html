@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrams : System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        label {
+            display: inline-block;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            margin: 10px 0;
+        }
+
+        .box {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="innerBox">
+            <label for="">Text 1 :</label>
+            <input type="text" id="word1">
+            <br>
+            <label for="">Text 2 :</label>
+            <input type="text" id="word2">
+        </div>
+        <button id="btn">Check Here</button>
+        <h3 id="ans"></h3>
+    </div>
+
+    <script>
+
+        function isanagrams(str1, str2) {
+            str1 = str1.toLowerCase();
+            str2 = str2.toLowerCase();
+
+            if (str1.length !== str2.length) {
+                return false;
+            }
+
+            let firstStr = str1.split('').sort().join('');
+            let secondStr = str2.split('').sort().join('');
+
+            return firstStr === secondStr;
+        }
+
+        let btn = document.getElementById("btn");
+        let ans = document.getElementById('ans');
+
+        function isanagramss() {
+            let word1 = document.getElementById('word1').value;
+            let word2 = document.getElementById('word2').value;
+
+            if (isanagrams(word1, word2)) {
+                ans.textContent = "It's An Anagram.";
+            } else {
+                ans.textContent = "It's Not An Anagram.";
+            }
+        };
+
+        btn.addEventListener('click', isanagramss)
+
+    </script>
+</body>
+
+</html>

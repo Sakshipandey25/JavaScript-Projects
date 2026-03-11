@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Longest Word Finder</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        input {
+            padding: 8px;
+            width: 300px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Find Longest Word</h2>
+
+    <input type="text" id="sentenceInput" placeholder="Enter a sentence">
+    <button onclick="findLongestWord()">Find</button>
+
+    <div id="result"></div>
+
+    <script>
+        function getLongestWord(str) {
+            let words = str.split(" ");
+            let longest = "";
+
+            for (let word of words) {
+                if (word.length > longest.length) {
+                    longest = word;
+                }
+            }
+            return longest;
+        }
+
+        function findLongestWord() {
+            let sentence = document.getElementById("sentenceInput").value;
+
+            if (sentence.trim() === "") {
+                document.getElementById("result").innerText = 'Please Enter A Valid Sentence!';
+                return
+            }
+
+            let longestWord = getLongestWord(sentence);
+
+            document.getElementById("result").innerText = 'Longest Word : ' + longestWord;
+        }
+    </script>
+</body>
+
+</html>

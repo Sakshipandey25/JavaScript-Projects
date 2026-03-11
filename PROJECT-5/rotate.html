@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Array</title>
+
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Rotate Array</h2>
+
+    <input type="text" id="arrayInput" placeholder="Enter numbers (comma separated)">
+    <br>
+    <input type="number" id="kValue" placeholder="Enter rotate value (k)">
+    <br>
+    <button onclick="rotateNumbers()">Rotate</button>
+
+    <div id="result"></div>
+
+    <script>
+        function rotateArray(arr, k) {
+            k = k % arr.length;
+            let part1 = arr.slice(k);
+            let part2 = arr.slice(0, k);
+            return part1.concat(part2);
+        }
+
+        function rotateNumbers() {
+            let input = document.getElementById("arrayInput").value;
+            let k = Number(document.getElementById("kValue").value);
+
+            let arr = input.split(",").map(num => Number(num.trim()));
+
+            if (arr.length === 0 || input === "") {
+                document.getElementById("result").innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            let rotatedArray = rotateArray(arr, k);
+
+            document.getElementById("result").innerText = "Rotated Array: " + rotatedArray.join(", ");
+        }
+    </script>
+
+</body>
+
+</html>
