@@ -1,5 +1,5 @@
 .product-card {
-    /* Changed from flex to block to stack elements vertically */
+    
     padding: 0;
     border: 1px solid #eee;
     border-radius: 4px;
@@ -14,13 +14,13 @@
 }
 
 .product-card img {
-    /* Make image fill the top of the card */
+    
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Add padding to the text content area below the image */
+
 .product-info {
     padding: 15px;
 }
