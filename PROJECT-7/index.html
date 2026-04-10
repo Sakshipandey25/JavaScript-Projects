@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProductHub</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Clay blobs background -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="blob blob4"></div>
+
+  <div id="app">
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav-logo">🧸 ProductHub</div>
+      <div class="nav-actions">
+        <button class="nav-btn" id="btnAdd" onclick="showPage('add')">＋ Add</button>
+        <button class="nav-btn" id="btnView" onclick="showPage('view')">🗂 View</button>
+        <button class="nav-btn cart-btn" onclick="showPage('cart')">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- ===================== ADD PAGE ===================== -->
+      <div id="addPage" class="page active">
+        <div class="page-header">
+          <h1 class="page-title">Add a <span class="highlight">Product</span></h1>
+          <p class="page-sub">Fill in the details to list a new item</p>
+        </div>
+
+        <div class="form-card clay">
+          <div class="form-group">
+            <label class="form-label">📦 Product Name</label>
+            <input class="form-input clay-inset" type="text" id="name" placeholder="e.g. Wireless Headphones">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">💰 Price (₹)</label>
+            <input class="form-input clay-inset" type="number" id="price" placeholder="e.g. 1999">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">🖼️ Image URL</label>
+            <input class="form-input clay-inset" type="text" id="image" placeholder="https://..." oninput="preview()">
+          </div>
+
+          <div class="preview-box clay-inset" id="previewBox">
+            <div class="preview-placeholder" id="previewPlaceholder">
+              <span class="icon">🖼️</span>
+              <span>Image preview will appear here</span>
+            </div>
+            <img id="preview" alt="Preview" style="display:none;">
+          </div>
+
+          <button class="btn-primary clay" onclick="addProduct()">Add Product →</button>
+        </div>
+      </div>
+
+      <!-- ===================== VIEW PAGE ===================== -->
+      <div id="viewPage" class="page">
+        <div class="page-header">
+          <h1 class="page-title">Explore <span class="highlight">Products</span></h1>
+          <p class="page-sub">Browse & add your favourites to cart</p>
+        </div>
+
+        <div class="search-wrapper clay-inset">
+          <span class="search-icon">🔍</span>
+          <input class="search-input" type="text" id="search" placeholder="Search products..." oninput="renderProducts()">
+        </div>
+
+        <div class="stats-bar" id="statsBar"></div>
+        <div class="products-grid" id="products"></div>
+      </div>
+
+      <!-- ===================== CART PAGE ===================== -->
+      <div id="cartPage" class="page">
+        <div class="page-header">
+          <h1 class="page-title">Your <span class="highlight">Cart</span></h1>
+          <p class="page-sub">Review and manage your selected items</p>
+        </div>
+        <div id="cartItems" class="cart-list"></div>
+      </div>
+
+      <!-- ===================== PRODUCT DETAIL PAGE ===================== -->
+      <div id="detailPage" class="page">
+        <button class="back-btn clay" onclick="goBack()">← Back</button>
+        <div id="detailContent"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" onclick="handleModalClick(event)">
+    <div class="modal-box clay" id="modalContent"></div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast clay" id="toast">
+    <span class="toast-icon" id="toastIcon">✅</span>
+    <span id="toastMsg">Done!</span>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
